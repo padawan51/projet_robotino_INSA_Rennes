@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThresholdDialog</class>
+ <widget class="QDialog" name="ThresholdDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>790</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="cameraGroup">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>285</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>CAMERAS</string>
+   </property>
+   <widget class="QRadioButton" name="camera_l">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>20</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gauche</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="camera_m">
+    <property name="geometry">
+     <rect>
+      <x>105</x>
+      <y>20</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Milieu</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="camera_r">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>20</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Droite</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="sourceGroup">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>285</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>SOURCE</string>
+   </property>
+   <widget class="QRadioButton" name="src_cam">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>20</y>
+      <width>130</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Utiliser la caméra</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="src_img">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>50</y>
+      <width>135</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image enregistrée</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openImgFileBtn">
+    <property name="geometry">
+     <rect>
+      <x>155</x>
+      <y>50</y>
+      <width>40</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="captureBtn">
+    <property name="geometry">
+     <rect>
+      <x>155</x>
+      <y>20</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capture</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="originThresh">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>200</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Configurer l'origine du repère</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hue_min_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Teinte min</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hue_max_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>275</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Teinte max</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sat_min_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>90</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Saturation min</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sat_max_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>345</y>
+     <width>90</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Saturation max</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="val_min_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Valeur min</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="val_max_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>415</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Valeur max</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="hue_min">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>240</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="hue_max">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>275</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sat_min">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>310</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sat_max">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>345</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="val_min">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>380</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="val_max">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>415</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_hue_min">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>240</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_hue_max">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>275</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_sat_min">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>310</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_sat_max">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>345</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_val_min">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>380</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_val_max">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>415</y>
+     <width>50</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="razBtn">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>450</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RAZ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveHSVBtn">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>530</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="canceledBtn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>530</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="imgView">
+   <property name="geometry">
+    <rect>
+     <x>305</x>
+     <y>10</y>
+     <width>480</width>
+     <height>270</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="imgThreshView">
+   <property name="geometry">
+    <rect>
+     <x>305</x>
+     <y>290</y>
+     <width>480</width>
+     <height>270</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

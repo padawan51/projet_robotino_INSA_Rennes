@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CorrectorDialog</class>
+ <widget class="QDialog" name="CorrectorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>376</width>
+    <height>165</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="validate_btn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>50</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>VALIDER</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel_btn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>90</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ANNULER</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="position_label">
+   <property name="geometry">
+    <rect>
+     <x>73</x>
+     <y>15</y>
+     <width>55</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Position</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="orientation_label">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>15</y>
+     <width>70</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Orientation</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="kp_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>30</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kp</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ki_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>30</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ki</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="kd_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>30</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kd</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="kp_pos">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>40</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="kp_ori">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>40</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="ki_pos">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>80</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="kd_pos">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>120</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="ki_ori">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>80</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="kd_ori">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>120</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="singleStep">
+    <double>0.100000000000000</double>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

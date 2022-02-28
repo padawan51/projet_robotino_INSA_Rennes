@@ -1807,6 +1807,8 @@ void MainWindow::computeRobotOrientation(){
     int nbRow;
     cv::FileStorage fs(saveParamIHMFile, cv::FileStorage::READ);
     int height_LED;
+    int tool_length;
+    int extra;
     double theta;
     double sigma;
 
@@ -1815,6 +1817,8 @@ void MainWindow::computeRobotOrientation(){
     cv::Mat measure_pt;
 
     fs["leds_height"] >> height_LED;
+    fs["tool_length"] >> tool_length;
+    fs["extra"] >> extra;
     fs.release();
 
     for(int i = 0; i < v_generatedPath.size(); i++){
@@ -1830,8 +1834,8 @@ void MainWindow::computeRobotOrientation(){
                         1);
 
         sensor_end = (Mat_<double>(4, 1) <<
-                        v_generatedPath[i].ptr<double>(nbRow - 1)[0] + 300 * cos(theta),
-                        v_generatedPath[i].ptr<double>(nbRow - 1)[1] + 300 * sin(theta),
+                        v_generatedPath[i].ptr<double>(nbRow - 1)[0] + (tool_length + extra) * cos(theta),
+                        v_generatedPath[i].ptr<double>(nbRow - 1)[1] + (tool_length + extra) * sin(theta),
                         height_LED,
                         1);
 
